@@ -1,3 +1,4 @@
+![logo](https://github.com/user-attachments/assets/4c0eaf52-8fac-42d4-93de-5a5f0adb5e0d)
 Football Score - Simplify Football Match Scoring
 Football Score is a user-friendly mobile application designed to calculate and track team points during football matches. Whether you're organizing a friendly game or managing a local league, this app simplifies the process of scoring and keeps the focus on the game itself.
 
