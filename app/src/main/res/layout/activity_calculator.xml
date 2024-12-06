@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".CalculatorActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="-10dp"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="-10dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:src="@drawable/logo"/>
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/back" />
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:text="نتيجة المباريات"
+            android:textAllCaps="true"
+            android:textColor="#59923F"
+            android:textSize="35sp"
+            android:layout_marginEnd="5dp"
+            android:textStyle="bold"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/match1"
+            android:layout_below="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            android:backgroundTint="#FFF">
+
+            <RelativeLayout
+                android:id="@+id/teams"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/fA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:text="الفريق الأول"
+                    android:layout_alignParentTop="true"/>
+
+                <TextView
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#59923F"
+                    android:textSize="24sp"
+                    android:gravity="center"
+                    android:text="VS"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/sA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:text="الفريق الثاني"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/fAB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="45dp"
+                    android:layout_below="@+id/fA"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="--"/>
+
+                <EditText
+                    android:id="@+id/sAB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/sA"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:layout_marginStart="45dp"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="--"/>
+                <TextView
+                    android:id="@+id/fAP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_below="@+id/fAB"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:text="ليس بعد"/>
+
+                <TextView
+                    android:id="@+id/sAP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/sAB"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:layout_marginStart="32dp"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:text="ليس بعد"/>
+
+                <Button
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/MajA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sAP"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#59923F"
+                    android:padding="13dp"
+                    android:textColor="#FFFFFF"
+                    android:text="تعديل"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"
+
+                    />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:backgroundTint="#FFF"
+            android:id="@+id/match2"
+            android:layout_below="@+id/match1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <RelativeLayout
+                android:id="@+id/teams2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/fB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:text="الفريق الأول"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="VS"
+                    android:textColor="#59923F"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="الفريق الثاني"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/fBB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fB"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="45dp"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:hint="--"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/sBB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sB"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:hint="--"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/fBP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fBB"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="ليس بعد"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/sBP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sBB"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="ليس بعد"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/MajB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sBP"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#59923F"
+                    android:padding="13dp"
+                    android:text="تعديل"
+                    android:textAllCaps="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:backgroundTint="#FFF"
+            android:id="@+id/match3"
+            android:layout_below="@+id/match2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <RelativeLayout
+                android:id="@+id/teams3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/fC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:text="الفريق الأول"
+                    android:layout_alignParentTop="true"/>
+
+                <TextView
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#59923F"
+                    android:textSize="24sp"
+                    android:gravity="center"
+                    android:text="VS"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/sC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:text="الفريق الثاني"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/fCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="45dp"
+                    android:layout_below="@+id/fC"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="--"/>
+
+                <EditText
+                    android:id="@+id/sCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/sC"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:layout_marginStart="45dp"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="--"/>
+                <TextView
+                    android:id="@+id/fCP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_below="@+id/fCB"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:text="ليس بعد"/>
+
+                <TextView
+                    android:id="@+id/sCP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/sCB"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:layout_marginStart="32dp"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:text="ليس بعد"/>
+
+                <Button
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/MajC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sCP"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#59923F"
+                    android:padding="13dp"
+                    android:textColor="#FFFFFF"
+                    android:text="تعديل"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:backgroundTint="#FFF"
+            android:id="@+id/match4"
+            android:layout_below="@+id/match3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <RelativeLayout
+                android:id="@+id/teams4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/fD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:text="الفريق الأول"
+                    android:layout_alignParentTop="true"/>
+
+                <TextView
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#59923F"
+                    android:textSize="24sp"
+                    android:gravity="center"
+                    android:text="VS"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/sD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:text="الفريق الثاني"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/fDB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="45dp"
+                    android:layout_below="@+id/fD"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="--"/>
+
+                <EditText
+                    android:id="@+id/sDB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/sD"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:layout_marginStart="45dp"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="--"/>
+                <TextView
+                    android:id="@+id/fDP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_below="@+id/fDB"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:text="ليس بعد"/>
+
+                <TextView
+                    android:id="@+id/sDP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/sDB"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:layout_marginStart="32dp"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:text="ليس بعد"/>
+
+                <Button
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/MajD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sDP"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#59923F"
+                    android:padding="13dp"
+                    android:textColor="#FFFFFF"
+                    android:text="تعديل"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:backgroundTint="#FFF"
+            android:id="@+id/match5"
+            android:layout_below="@+id/match4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <RelativeLayout
+                android:id="@+id/teams5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/fE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:text="الفريق الأول"
+                    android:layout_alignParentTop="true"/>
+
+                <TextView
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#59923F"
+                    android:textSize="24sp"
+                    android:gravity="center"
+                    android:text="VS"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/sE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:text="الفريق الثاني"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/fEB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="45dp"
+                    android:layout_below="@+id/fE"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="--"/>
+
+                <EditText
+                    android:id="@+id/sEB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/sE"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:layout_marginStart="45dp"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="--"/>
+                <TextView
+                    android:id="@+id/fEP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_below="@+id/fEB"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:text="ليس بعد"/>
+
+                <TextView
+                    android:id="@+id/sEP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/sEB"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:layout_marginStart="32dp"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:text="ليس بعد"/>
+
+                <Button
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/MajE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sEP"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#59923F"
+                    android:padding="13dp"
+                    android:textColor="#FFFFFF"
+                    android:text="تعديل"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:backgroundTint="#FFF"
+            android:id="@+id/match6"
+            android:layout_below="@+id/match5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <RelativeLayout
+                android:id="@+id/teams6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/fF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:text="الفريق الأول"
+                    android:layout_alignParentTop="true"/>
+
+                <TextView
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#59923F"
+                    android:textSize="24sp"
+                    android:gravity="center"
+                    android:text="VS"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/sF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:text="الفريق الثاني"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/fFB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="45dp"
+                    android:layout_below="@+id/fF"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="--"/>
+
+                <EditText
+                    android:id="@+id/sFB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/sF"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:layout_marginStart="45dp"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="--"/>
+                <TextView
+                    android:id="@+id/fFP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_below="@+id/fFB"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:text="ليس بعد"/>
+
+                <TextView
+                    android:id="@+id/sFP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/sFB"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:layout_marginStart="32dp"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:text="ليس بعد"/>
+
+                <Button
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/MajF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sFP"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#59923F"
+                    android:padding="13dp"
+                    android:textColor="#FFFFFF"
+                    android:text="تعديل"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/stat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/match6"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="5dp"
+            android:text="الاحصائيات"
+            android:textAllCaps="true"
+            android:textColor="#59923F"
+            android:textSize="28sp"
+            android:layout_marginEnd="5dp"
+            android:textStyle="bold"
+            />
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/stat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:stretchColumns="*"
+            >
+
+            <!-- Header Row -->
+            <TableRow
+                android:background="#59923F">
+                <TextView
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="المنتخب"
+                    android:layout_margin="2dp"
+                    />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="فوز" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="تعادل"
+                    android:layout_margin="2dp"/>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="خسارة" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="نقاط"
+                    android:layout_margin="2dp"/>
+
+
+            </TableRow>
+
+            <!-- Row 1 -->
+            <TableRow  android:background="#f3fe88"
+                android:gravity="center">
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#3A3A3A"
+                    android:id="@+id/first"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="المنتخب 1" />
+
+                <TextView
+
+                    android:textSize="16sp"
+                    android:textColor="#3A3A3A"
+                    android:id="@+id/win1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0" />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#3A3A3A"
+                    android:id="@+id/null1"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/loose1"
+                    android:textSize="16sp"
+                    android:textColor="#3A3A3A"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0" />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#3A3A3A"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/score1"
+                    android:gravity="center"
+                    android:text="0" />
+
+
+            </TableRow>
+
+            <!-- Row 2 -->
+            <TableRow android:background="#99dcce"
+                android:gravity="center">
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#3A3A3A"
+                    android:id="@+id/second"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="المنتخب 2" />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#3A3A3A"
+                    android:id="@+id/win2"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0" />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#3A3A3A"
+                    android:id="@+id/null2"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0" />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#3A3A3A"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/loose2"
+                    android:gravity="center"
+                    android:text="0" />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#3A3A3A"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/score2"
+                    android:gravity="center"
+                    android:text="0" />
+
+
+            </TableRow>
+
+            <!-- Row 3 -->
+            <TableRow android:background="#ddf599"
+                android:gravity="center">
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#3A3A3A"
+                    android:id="@+id/third"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="المنتخب 3" />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#3A3A3A"
+                    android:id="@+id/win3"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0" />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#3A3A3A"
+                    android:id="@+id/null3"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0" />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#3A3A3A"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/loose3"
+                    android:gravity="center"
+                    android:text="0" />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#3A3A3A"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/score3"
+                    android:gravity="center"
+                    android:text="0" />
+
+
+            </TableRow>
+
+            <!-- Row 4 -->
+            <TableRow android:background="#b5e7b8"
+                android:gravity="center">
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#3A3A3A"
+                    android:id="@+id/fourth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="المنتخب 4" />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#3A3A3A"
+                    android:id="@+id/win4"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0" />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#3A3A3A"
+                    android:id="@+id/null4"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0" />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#3A3A3A"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/loose4"
+                    android:gravity="center"
+                    android:text="0" />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#3A3A3A"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/score4"
+                    android:gravity="center"
+                    android:text="0" />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/table"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="تحديد الفرق الصاعدة للدور المقبل يكون حسب المجموعات الأخرى، لذلك لا نستطيع تحديدها في هذا التطبيق."
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18sp"
+
+            />
+
+    </RelativeLayout>
+
+</ScrollView>
