@@ -45,12 +45,13 @@
             android:layout_below="@+id/logo"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="5dp"
-            android:text="اقرأ عنا"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="35dp"
+            android:text="About Us"
             android:textAllCaps="true"
             android:textColor="#59923F"
-            android:textSize="35sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -92,7 +93,11 @@
             android:layout_marginBottom="20dp"
             android:lineSpacingExtra="2dp"
             android:padding="10dp"
-            android:text="1- من نحن؟\nمشروع شركة ناشئة نوفر دورات تدريبية، ورشات عمل، معلومات، دروس و محاضرات في مجالات مختلفة مثل: البرمجة و الخوارزميات، المكتبية، الذكاء الاصطناعي، الأمن السيبراني ... الخ\n2- خدماتنا:\nفي ديفلوبور نوفر خدمات شاملة متخصصة في مجال تكنولوجيا المعلومات والبرمجة لتقديم حلول مبتكرة في تطوير البرمجيات (تصميم و تطوير تطبيقات الهاتف، المواقع الالكترونية ... الخ)\n3- دعم طلبة الجامعة:\nفي ديفولوبور نقوم بمساعدة الطلبة الجامعيين خاصة المقبلين على التخرج في كتابة و تنسيق بحوثهم و مذكرات التخرج، تصميم عروض تقديمية احترافية، اختيار مواضيع التخرج، برمجة الجزء التطبيقي من مذكرة التخرج... "
+            android:text="1- Who are we?\nA startup project providing training courses, workshops, information, lessons, and lectures in various fields such as programming and algorithms, office tools, artificial intelligence, cybersecurity, etc.
+\n\n2- Our Services:
+At Developor, we offer comprehensive and specialized services in the field of information technology and programming to deliver innovative solutions in software development (designing and developing mobile applications, websites, etc.).\n
+\n3- Supporting University Students:
+At Developor, we assist university students, especially those nearing graduation, in writing and formatting their research and graduation theses, designing professional presentations, selecting graduation topics, programming the practical part of their graduation projects, etc."
             android:textColor="@color/black"
             android:textSize="16sp" />
 
@@ -106,7 +111,7 @@
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:text="هل تريد المزيد؟ تواصل معنا الآن"
+            android:text="Do you want more? Contact us now"
             android:textColor="#59923F" />
 
     </RelativeLayout>

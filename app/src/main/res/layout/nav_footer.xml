@@ -13,7 +13,7 @@
         android:background="#59923F"
         android:gravity="center"
         android:paddingTop="8dp"
-        android:text="الخروج من التطبيق"
+        android:text="Exit the app"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textDirection="rtl"

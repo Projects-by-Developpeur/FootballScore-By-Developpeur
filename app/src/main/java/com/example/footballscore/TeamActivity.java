@@ -39,28 +39,28 @@ public class TeamActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
+
         LinearQuitApp = navigationView.findViewById(R.id.LinearQuitApp);
         LinearQuitApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder mBuilder = new AlertDialog.Builder(TeamActivity.this);
-                mBuilder.setTitle("هل تود الخروج من التطبيق؟");
+                mBuilder.setTitle("Do you want to exit the app?");
+
                 mBuilder.setIcon(R.drawable.logout);
-                mBuilder.setPositiveButton("لا", new DialogInterface.OnClickListener() {
+                mBuilder.setPositiveButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
                     }
-                }).setNegativeButton("نعم", new DialogInterface.OnClickListener() {
+                }).setNegativeButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         finishAffinity();
                     }
                 });
                AlertDialog dialog = mBuilder.create();
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                    dialog.getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
-                }
+
                 dialog.show();
 
             }
@@ -78,7 +78,11 @@ public class TeamActivity extends AppCompatActivity implements NavigationView.On
         thirdT = third.getEditText().getText().toString().trim();
         fourthT = fourth.getEditText().getText().toString().trim();
         drawerLayout = findViewById(R.id.drawer_layout);
-        setupTextWatchers();
+        setupTextWatchers(first);
+        setupTextWatchers(second);
+        setupTextWatchers(third);
+        setupTextWatchers(fourth);
+
         //button next
         findViewById(R.id.Next).setOnClickListener(new View.OnClickListener() {
 
@@ -127,7 +131,7 @@ public class TeamActivity extends AppCompatActivity implements NavigationView.On
         boolean hasError = false;
 
         if (firstT.isEmpty()) {
-            first.setError("يرجى كتابة اسم المنتخب الأول");
+            first.setError("Please enter the name of the first team");
             first.requestFocus();
             hasError = true;
         } else {
@@ -136,7 +140,8 @@ public class TeamActivity extends AppCompatActivity implements NavigationView.On
         }
 
         if (secondT.isEmpty()) {
-            second.setError("يرجى كتابة اسم المنتخب الثاني");
+            second.setError("Please enter the name of the second team");
+
             second.requestFocus();
             hasError = true;
         } else {
@@ -145,7 +150,8 @@ public class TeamActivity extends AppCompatActivity implements NavigationView.On
         }
 
         if (thirdT.isEmpty()) {
-            third.setError("يرجى كتابة اسم المنتخب الثالث");
+            third.setError("Please enter the name of the third team");
+
             third.requestFocus();
             hasError = true;
         } else {
@@ -154,7 +160,8 @@ public class TeamActivity extends AppCompatActivity implements NavigationView.On
         }
 
         if (fourthT.isEmpty()) {
-            fourth.setError("يرجى كتابة اسم المنتخب الرابع");
+            fourth.setError("Please enter the name of the fourth team");
+
             fourth.requestFocus();
             hasError = true;
         } else {
@@ -177,7 +184,7 @@ public class TeamActivity extends AppCompatActivity implements NavigationView.On
         }
 
         this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "اضغط مرة أخرى للخروج من التطبيق", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Press again to exit the application", Toast.LENGTH_SHORT).show();
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -189,16 +196,16 @@ public class TeamActivity extends AppCompatActivity implements NavigationView.On
 
 
     // Add TextWatchers to clear errors in real-time
-    private void setupTextWatchers() {
-        first.getEditText().addTextChangedListener(new TextWatcher() {
+    private void setupTextWatchers(TextInputLayout textInputLayout) {
+        textInputLayout.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (!s.toString().trim().isEmpty()) {
-                    first.setError(null);
-                    first.setErrorEnabled(false);
+                    textInputLayout.setError(null);
+                    textInputLayout.setErrorEnabled(false);
                 }
             }
 
@@ -206,53 +213,6 @@ public class TeamActivity extends AppCompatActivity implements NavigationView.On
             public void afterTextChanged(Editable s) {}
         });
 
-        second.getEditText().addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (!s.toString().trim().isEmpty()) {
-                    second.setError(null);
-                    second.setErrorEnabled(false);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {}
-        });
-
-        third.getEditText().addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (!s.toString().trim().isEmpty()) {
-                    third.setError(null);
-                    third.setErrorEnabled(false);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {}
-        });
-
-        fourth.getEditText().addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (!s.toString().trim().isEmpty()) {
-                    fourth.setError(null);
-                    fourth.setErrorEnabled(false);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {}
-        });
     }
 
     @Override

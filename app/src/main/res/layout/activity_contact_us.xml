@@ -45,18 +45,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="اتصل بنا"
+            android:text="Contact Us"
             android:textColor="#59923F"
-            android:textSize="32sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <!-- Description Text -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="29dp"
             android:gravity="center"
-            android:text="نحن هنا لمساعدتك، تواصل معنا عبر :"
+            android:text="We are here to help you, contact us via:"
             android:textColor="#252424"
             android:textSize="18sp" />
 

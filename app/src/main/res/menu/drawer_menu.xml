@@ -1,19 +1,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
 
     <item
-        android:id="@+id/nav_contact_us"
-        android:title="اتصل بنا"
-        android:icon="@drawable/contact_us"
-        />
-    <item
+
         android:id="@+id/nav_about_us"
-        android:title="اقرأ عنا"
+        android:title="About Us"
         android:icon="@drawable/read_about_us"
         />
+
+    <item
+    android:id="@+id/nav_contact_us"
+    android:title="Contact Us"
+    android:icon="@drawable/contact_us"
+    />
     <item
         android:id="@+id/nav_share"
-        android:title="شارك التطبيق"
+        android:title="Share the app"
         android:icon="@drawable/share_app"
         />
 

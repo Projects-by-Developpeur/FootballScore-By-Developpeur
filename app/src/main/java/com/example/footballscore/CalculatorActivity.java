@@ -166,7 +166,8 @@ public class CalculatorActivity extends AppCompatActivity {
                 S_fAB = fAB.getText().toString().trim();
                 S_sAB = sAB.getText().toString().trim();
                 if (S_fAB.isEmpty()) {
-                    fAB.setError("يرجى كتابة نتيجة المباراة");
+                    fAB.setError("Please enter the match result");
+
 
                 } else {
                     fAB.setError(null);
@@ -174,7 +175,7 @@ public class CalculatorActivity extends AppCompatActivity {
                 }
 
                 if (S_sAB.isEmpty()) {
-                    sAB.setError("يرجى كتابة نتيجة المباراة");
+                    sAB.setError("Please enter the match result");
 
 
                 } else {
@@ -182,8 +183,8 @@ public class CalculatorActivity extends AppCompatActivity {
 
 
                     if ((Integer.parseInt(S_fAB)) > (Integer.parseInt(S_sAB))) {
-                        fAP.setText("3 نقاط");
-                        sAP.setText("0 نقطة");
+                        fAP.setText("3 Points");
+                        sAP.setText("0 Points");
                         MajA.setClickable(false);
                         win1 = win1 + 1;
                         loose2 = loose2 + 1;
@@ -196,8 +197,8 @@ public class CalculatorActivity extends AppCompatActivity {
                     }
 
                     if ((Integer.parseInt(S_fAB)) == (Integer.parseInt(S_sAB))) {
-                        fAP.setText("1 نقطة");
-                        sAP.setText("1 نقطة");
+                        fAP.setText("1 Point");
+                        sAP.setText("1 Point");
                         MajA.setClickable(false);
                         null1 = null1 + 1;
                         null2 = null2 + 1;
@@ -210,8 +211,8 @@ public class CalculatorActivity extends AppCompatActivity {
                     }
 
                     if ((Integer.parseInt(S_sAB)) > (Integer.parseInt(S_fAB))) {
-                        fAP.setText("0 نقطة");
-                        sAP.setText("3 نقاط");
+                        fAP.setText("0 Points");
+                        sAP.setText("3 Points");
                         MajA.setClickable(false);
                         win2 = win2 + 1;
                         loose1 = loose1 + 1;
@@ -232,7 +233,7 @@ public class CalculatorActivity extends AppCompatActivity {
                 S_fBB = fBB.getText().toString().trim();
                 S_sBB = sBB.getText().toString().trim();
                 if (S_fBB.isEmpty()) {
-                    fBB.setError("يرجى كتابة نتيجة المباراة");
+                    fBB.setError("Please enter the match result");
 
                 } else {
                     fBB.setError(null);
@@ -240,7 +241,7 @@ public class CalculatorActivity extends AppCompatActivity {
                 }
 
                 if (S_sBB.isEmpty()) {
-                    sBB.setError("يرجى كتابة نتيجة المباراة");
+                    sBB.setError("Please enter the match result");
 
 
                 } else {
@@ -248,8 +249,8 @@ public class CalculatorActivity extends AppCompatActivity {
 
 
                     if ((Integer.parseInt(S_fBB)) > (Integer.parseInt(S_sBB))) {
-                        fBP.setText("3 نقاط");
-                        sBP.setText("0 نقطة");
+                        fBP.setText("3 Points");
+                        sBP.setText("0 Points");
                         MajB.setClickable(false);
                         win1 = win1 + 1;
                         loose3 = loose3 + 1;
@@ -260,8 +261,8 @@ public class CalculatorActivity extends AppCompatActivity {
                     }
 
                     if ((Integer.parseInt(S_fBB)) == (Integer.parseInt(S_sBB))) {
-                        fBP.setText("1 نقطة");
-                        sBP.setText("1 نقطة");
+                        fBP.setText("1 Point");
+                        sBP.setText("1 Point");
                         MajB.setClickable(false);
                         null1 = null1 + 1;
                         null3 = null3 + 1;
@@ -274,8 +275,8 @@ public class CalculatorActivity extends AppCompatActivity {
                     }
 
                     if ((Integer.parseInt(S_sBB)) > (Integer.parseInt(S_fBB))) {
-                        fBP.setText("0 نقطة");
-                        sBP.setText("3 نقاط");
+                        fBP.setText("0 Points");
+                        sBP.setText("3 Points");
                         MajB.setClickable(false);
                         win3 = win3 + 1;
                         loose1 = loose1 + 1;
@@ -296,7 +297,7 @@ public class CalculatorActivity extends AppCompatActivity {
 
 
                 if (S_fCB.isEmpty()) {
-                    fCB.setError("يرجى كتابة نتيجة المباراة");
+                    fCB.setError("Please enter the match result");
 
                 } else {
                     fCB.setError(null);
@@ -304,15 +305,15 @@ public class CalculatorActivity extends AppCompatActivity {
                 }
 
                 if (S_sCB.isEmpty()) {
-                    sCB.setError("يرجى كتابة نتيجة المباراة");
+                    sCB.setError("Please enter the match result");
 
 
                 } else {
                     sCB.setError(null);
 
                     if ((Integer.parseInt(S_fCB)) > (Integer.parseInt(S_sCB))) {
-                        fCP.setText("3 نقاط");
-                        sCP.setText("0 نقطة");
+                        fCP.setText("3 Points");
+                        sCP.setText("0 Points");
                         MajC.setClickable(false);
                         win1 = win1 + 1;
                         loose4 = loose4 + 1;
@@ -324,8 +325,8 @@ public class CalculatorActivity extends AppCompatActivity {
                     }
 
                     if ((Integer.parseInt(S_fCB)) == (Integer.parseInt(S_sCB))) {
-                        fCP.setText("1 نقطة");
-                        sCP.setText("1 نقطة");
+                        fCP.setText("1 Point");
+                        sCP.setText("1 Point");
                         MajC.setClickable(false);
                         null1 = null1 + 1;
                         null4 = null4 + 1;
@@ -338,8 +339,8 @@ public class CalculatorActivity extends AppCompatActivity {
                     }
 
                     if ((Integer.parseInt(S_sCB)) > (Integer.parseInt(S_fCB))) {
-                        fCP.setText("0 نقطة");
-                        sCP.setText("3 نقاط");
+                        fCP.setText("0 Points");
+                        sCP.setText("3 Points");
                         MajC.setClickable(false);
                         win4 = win4 + 1;
                         loose1 = loose1 + 1;
@@ -361,7 +362,7 @@ public class CalculatorActivity extends AppCompatActivity {
 
 
                 if (S_fDB.isEmpty()) {
-                    fDB.setError("يرجى كتابة نتيجة المباراة");
+                    fDB.setError("Please enter the match result");
 
                 } else {
                     fDB.setError(null);
@@ -369,15 +370,15 @@ public class CalculatorActivity extends AppCompatActivity {
                 }
 
                 if (S_sDB.isEmpty()) {
-                    sDB.setError("يرجى كتابة نتيجة المباراة");
+                    sDB.setError("Please enter the match result");
 
 
                 } else {
                     sAB.setError(null);
 
                     if ((Integer.parseInt(S_fDB)) > (Integer.parseInt(S_sDB))) {
-                        fDP.setText("3 نقاط");
-                        sDP.setText("0 نقطة");
+                        fDP.setText("3 Points");
+                        sDP.setText("0 Points");
                         MajD.setClickable(false);
                         win2 = win2 + 1;
                         loose3 = loose3 + 1;
@@ -388,8 +389,8 @@ public class CalculatorActivity extends AppCompatActivity {
                     }
 
                     if ((Integer.parseInt(S_fDB)) == (Integer.parseInt(S_sDB))) {
-                        fDP.setText("1 نقطة");
-                        sDP.setText("1 نقطة");
+                        fDP.setText("1 Point");
+                        sDP.setText("1 Point");
                         MajD.setClickable(false);
                         null2 = null2 + 1;
                         null3 = null3 + 1;
@@ -402,8 +403,8 @@ public class CalculatorActivity extends AppCompatActivity {
                     }
 
                     if ((Integer.parseInt(S_sDB)) > (Integer.parseInt(S_fDB))) {
-                        fDP.setText("0 نقطة");
-                        sDP.setText("3 نقاط");
+                        fDP.setText("0 Points");
+                        sDP.setText("3 Points");
                         MajD.setClickable(false);
                         win3 = win3 + 1;
                         loose2 = loose2 + 1;
@@ -424,7 +425,7 @@ public class CalculatorActivity extends AppCompatActivity {
 
 
                 if (S_fEB.isEmpty()) {
-                    fEB.setError("يرجى كتابة نتيجة المباراة");
+                    fEB.setError("Please enter the match result");
 
                 } else {
                     fEB.setError(null);
@@ -432,15 +433,15 @@ public class CalculatorActivity extends AppCompatActivity {
                 }
 
                 if (S_sEB.isEmpty()) {
-                    sEB.setError("يرجى كتابة نتيجة المباراة");
+                    sEB.setError("Please enter the match result");
 
 
                 } else {
                     sAB.setError(null);
 
                     if ((Integer.parseInt(S_fEB)) > (Integer.parseInt(S_sEB))) {
-                        fEP.setText("3 نقاط");
-                        sEP.setText("0 نقطة");
+                        fEP.setText("3 Points");
+                        sEP.setText("0 Points");
                         MajE.setClickable(false);
                         win2 = win2 + 1;
                         loose4 = loose4 + 1;
@@ -452,8 +453,8 @@ public class CalculatorActivity extends AppCompatActivity {
                     }
 
                     if ((Integer.parseInt(S_fEB)) == (Integer.parseInt(S_sEB))) {
-                        fEP.setText("1 نقطة");
-                        sEP.setText("1 نقطة");
+                        fEP.setText("1 Point");
+                        sEP.setText("1 Point");
                         MajE.setClickable(false);
                         null2 = null2 + 1;
                         null4 = null4 + 1;
@@ -466,8 +467,8 @@ public class CalculatorActivity extends AppCompatActivity {
                     }
 
                     if ((Integer.parseInt(S_sEB)) > (Integer.parseInt(S_fEB))) {
-                        fEP.setText("0 نقطة");
-                        sEP.setText("3 نقاط");
+                        fEP.setText("0 Points");
+                        sEP.setText("3 Points");
                         MajE.setClickable(false);
                         win4 = win4 + 1;
                         loose2 = loose2 + 1;
@@ -487,7 +488,7 @@ public class CalculatorActivity extends AppCompatActivity {
                 S_sFB = sFB.getText().toString().trim();
 
                 if (S_fFB.isEmpty()) {
-                    fFB.setError("يرجى كتابة نتيجة المباراة");
+                    fFB.setError("Please enter the match result");
 
                 } else {
                     fFB.setError(null);
@@ -495,15 +496,15 @@ public class CalculatorActivity extends AppCompatActivity {
                 }
 
                 if (S_sFB.isEmpty()) {
-                    sFB.setError("يرجى كتابة نتيجة المباراة");
+                    sFB.setError("Please enter the match result");
 
 
                 } else {
                     sAB.setError(null);
 
                     if ((Integer.parseInt(S_fFB)) > (Integer.parseInt(S_sFB))) {
-                        fFP.setText("3 نقاط");
-                        sFP.setText("0 نقطة");
+                        fFP.setText("3 Points");
+                        sFP.setText("0 Points");
                         MajF.setClickable(false);
                         win3 = win3 + 1;
                         loose4 = loose4 + 1;
@@ -514,8 +515,8 @@ public class CalculatorActivity extends AppCompatActivity {
                     }
 
                     if ((Integer.parseInt(S_fFB)) == (Integer.parseInt(S_sFB))) {
-                        fFP.setText("1 نقطة");
-                        sFP.setText("1 نقطة");
+                        fFP.setText("1 Point");
+                        sFP.setText("1 Point");
                         MajF.setClickable(false);
                         null3 = null3 + 1;
                         null4 = null4 + 1;
@@ -528,8 +529,8 @@ public class CalculatorActivity extends AppCompatActivity {
                     }
 
                     if ((Integer.parseInt(S_sFB)) > (Integer.parseInt(S_fFB))) {
-                        fFP.setText("0 نقطة");
-                        sFP.setText("3 نقاط");
+                        fFP.setText("0 Points");
+                        sFP.setText("3 Points");
                         MajF.setClickable(false);
                         win4 = win4 + 1;
                         loose3 = loose3 + 1;
