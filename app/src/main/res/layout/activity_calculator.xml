@@ -818,7 +818,7 @@
                     android:backgroundTint="#59923F"
                     android:padding="13dp"
                     android:textColor="#FFFFFF"
-                    android:text="تعديل"
+                    android:text="Update"
                     android:textAllCaps="true"
                     android:textSize="15sp"
                     />
@@ -832,7 +832,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="5dp"
-            android:text="الاحصائيات"
+            android:text="Statistics"
             android:textAllCaps="true"
             android:textColor="#59923F"
             android:textSize="28sp"
@@ -849,7 +849,7 @@
             android:layout_below="@+id/stat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layoutDirection="rtl"
+            android:layoutDirection="ltr"
             android:stretchColumns="*"
             >
 
@@ -919,6 +919,7 @@
             <TableRow  android:background="#f3fe88"
                 android:gravity="center">
                 <TextView
+                    android:gravity="center"
                     android:textStyle="bold"
                     android:textSize="14sp"
                     android:textColor="#3A3A3A"
@@ -976,6 +977,7 @@
             <TableRow android:background="#99dcce"
                 android:gravity="center">
                 <TextView
+                    android:gravity="center"
                     android:textStyle="bold"
                     android:textSize="14sp"
                     android:textColor="#3A3A3A"
@@ -1032,6 +1034,7 @@
             <TableRow android:background="#ddf599"
                 android:gravity="center">
                 <TextView
+                    android:gravity="center"
                     android:textStyle="bold"
                     android:textSize="14sp"
                     android:textColor="#3A3A3A"
@@ -1088,6 +1091,7 @@
             <TableRow android:background="#b5e7b8"
                 android:gravity="center">
                 <TextView
+                    android:gravity="center"
                     android:textStyle="bold"
                     android:textSize="14sp"
                     android:textColor="#3A3A3A"

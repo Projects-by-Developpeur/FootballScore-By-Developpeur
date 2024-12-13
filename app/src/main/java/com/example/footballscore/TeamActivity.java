@@ -168,7 +168,20 @@ public class TeamActivity extends AppCompatActivity implements NavigationView.On
             fourth.setError(null);
             fourth.setErrorEnabled(false);
         }
-
+        // Check if any two EditTexts have the same content
+        if (firstT.equals(secondT) || firstT.equals(thirdT) || firstT.equals(fourthT)) {
+            first.setError("Team names must be unique");
+            first.requestFocus();
+            hasError = true;
+        } else if (secondT.equals(thirdT) || secondT.equals(fourthT)) {
+            second.setError("Team names must be unique");
+            second.requestFocus();
+            hasError = true;
+        } else if (thirdT.equals(fourthT)) {
+            third.setError("Team names must be unique");
+            third.requestFocus();
+            hasError = true;
+        }
         // Enable the 'Next' button after validation check
         findViewById(R.id.Next).setClickable(true);
 
