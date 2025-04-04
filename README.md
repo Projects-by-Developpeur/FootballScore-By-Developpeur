@@ -6,9 +6,13 @@ Key Features
 - Real-Time Scoring: Quickly input and update scores during a match.
 - Automatic Point Calculation: Calculates team points based on match results (win, draw, or loss).
 - User-Friendly Interface: Intuitive design that makes it easy for anyone to use, from players to referees.
+![b2d43b1c-8cc6-40e5-a69f-8420c752eaad](https://github.com/user-attachments/assets/8e6b738c-eca4-4cdb-99ab-74cc30fe5aba)
+![746b4bfa-2536-494a-966d-a203cd9cbf8d](https://github.com/user-attachments/assets/94b2e542-fb0b-4248-a3f5-cf2e7792b665)
 
 Objective
 The goal of Football Score is to provide a simple yet effective solution for managing and calculating football match scores. It eliminates the need for manual calculations and ensures accurate point tracking, making it an essential tool for football enthusiasts.
+
+![897865c1-215c-404d-8d01-c866cb97ce5f](https://github.com/user-attachments/assets/3ac08151-97ce-4087-9553-ed3d271a5fc2)
 
 
 Development Highlights
